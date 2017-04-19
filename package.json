@@ -1,0 +1,47 @@
+{
+  "name": "http-fantasy-land",
+  "version": "0.1.0",
+  "devDependencies": {
+    "@spudly/eslint-config": "^5.0.1",
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.4.0",
+    "eslint": "^3.17.1",
+    "husky": "^0.13.3",
+    "jest": "^19.0.2",
+    "lint-staged": "^3.3.1",
+    "prettier": "^1.1.0"
+  },
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint .",
+    "demo": "babel-node demo.js",
+    "precommit": "lint-staged"
+  },
+  "eslintConfig": {
+    "extends": "@spudly"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write --print-width=100 --single-quote --bracket-spacing=false --trailing-comma=all",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "mime-db": "^1.27.0",
+    "ramda": "^0.23.0"
+  },
+  "files": "build",
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": 7.5
+          }
+        }
+      ]
+    ]
+  }
+}
