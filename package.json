@@ -15,7 +15,8 @@
     "test": "jest",
     "lint": "eslint .",
     "demo": "babel-node demo.js",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "build": "babel src -d build --ignore test.js"
   },
   "eslintConfig": {
     "extends": "@spudly"
