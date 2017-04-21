@@ -1,6 +1,6 @@
 {
   "name": "http-fantasy-land",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "devDependencies": {
     "@spudly/eslint-config": "^5.0.1",
     "babel-cli": "^6.24.1",
@@ -12,7 +12,9 @@
     "prettier": "^1.1.0"
   },
   "main": "build/index.js",
-  "files": ["build"],
+  "files": [
+    "build"
+  ],
   "scripts": {
     "test": "jest",
     "lint": "eslint .",
