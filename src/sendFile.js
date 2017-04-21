@@ -6,7 +6,7 @@ import {extname} from 'path';
 
 const sendFile = file =>
   compose(
-    assoc('body', fs.createReadStream(file)),
+    response => assoc('body', fs.createReadStream(file), response),
     assoc('status', 200),
     assoc('type', mimeTypes[extname(file)]),
   );
