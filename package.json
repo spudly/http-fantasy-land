@@ -20,8 +20,8 @@
     "lint": "eslint .",
     "demo": "babel-node demo.js",
     "precommit": "lint-staged",
-    "build": "babel src -d build --ignore test.js",
-    "prepare": "npm run build"
+    "build": "rm -rf build && babel src -d build --ignore test.js",
+    "prepublish": "npm run build"
   },
   "eslintConfig": {
     "extends": "@spudly"
