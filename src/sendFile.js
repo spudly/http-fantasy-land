@@ -8,7 +8,7 @@ const sendFile = file =>
   compose(
     response => assoc('body', fs.createReadStream(file), response),
     assoc('status', 200),
-    assoc('type', mimeTypes[extname(file)]),
+    assoc('type', mimeTypes[extname(file).substr(1)]),
   );
 
 export default sendFile;
