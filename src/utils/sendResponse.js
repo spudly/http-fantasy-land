@@ -1,15 +1,19 @@
+import forEachObjIndexed from 'ramda/src/forEachObjIndexed';
 import isStream from './isStream';
 import isString from './isString';
 import sendString from './sendString';
 import sendStream from './sendStream';
 
 const sendResponse = (nativeResponse, response) => {
-  if (response.type) {
-    nativeResponse.setHeader('Content-Type', response.type);
-  }
-
   // eslint-disable-next-line no-param-reassign
   nativeResponse.statusCode = response.status || 500;
+
+  forEachObjIndexed(
+    (value, key) => {
+      nativeResponse.setHeader(key, value);
+    },
+    response.headers,
+  );
 
   if (response.body) {
     if (isStream(response.body)) {

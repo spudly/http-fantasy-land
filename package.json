@@ -5,6 +5,7 @@
     "@spudly/eslint-config": "^5.0.1",
     "babel-cli": "^6.24.1",
     "babel-preset-env": "^1.4.0",
+    "babel-preset-stage-3": "^6.24.1",
     "eslint": "^3.17.1",
     "husky": "^0.13.3",
     "jest": "^19.0.2",
@@ -46,7 +47,8 @@
             "node": 7.5
           }
         }
-      ]
+      ],
+      "stage-3"
     ]
   }
 }

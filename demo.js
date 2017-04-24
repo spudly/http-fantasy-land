@@ -1,8 +1,11 @@
-import {createServer} from './src';
+import {listen, get} from './src';
 
-createServer(
-  () => ({
-    type: 'text/html',
+listen(
+  get('/', () => ({
+    status: 200,
+    headers: {
+      'Content-Type': 'text/html',
+    },
     body: `
       <!doctype html>
       <html>
@@ -14,6 +17,8 @@ createServer(
         </body>
       </html>
     `,
-  }),
+  })),
   {port: 8080},
-).then(() => console.log('listening!'));
+)
+  .then(() => console.log('Listening: http://localhost:8080/')) // eslint-disable-line no-console
+  .catch(error => console.error(error)); // eslint-disable-line no-console
