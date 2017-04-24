@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`creates a request object from the passed http request object 1`] = `
+Object {
+  "headers": Object {
+    "Accept": "text/css",
+  },
+  "method": "POST",
+  "url": "/path/to/something",
+}
+`;

@@ -1,8 +1,12 @@
+import deepFreeze from 'deep-freeze';
+
 const createRequest = nativeRequest =>
-  Object.freeze({
+  deepFreeze({
     method: nativeRequest.method,
     url: nativeRequest.url,
-    headers: nativeRequest.headers,
+    headers: {
+      ...nativeRequest.headers,
+    },
   });
 
 export default createRequest;
