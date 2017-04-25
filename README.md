@@ -14,6 +14,8 @@ An HTTP server library with a functional twist (a work in progress).
 
 A route is a function that, given a request object and a response object, returns a new response (or a promise that resolves to one).
 
+[TODO: elaborate]
+
 ### request
 
 The request object is serialized, immutable representation of an [http.IncomingMessage](https://nodejs.org/dist/latest/docs/api/http.html#http_class_http_incomingmessage) object.
@@ -42,7 +44,9 @@ The response object is a serialized, immutable representation of an [http.Server
 }
 ```
 
-### listen(route, options).then(stop => { stop(); });
+### listen(route, {port: 8080}).then(stop => { stop(); });
+
+The listen function takes a route and an options object. It then creates and starts a server and returns a promise that resolves to a `stop()` function that you can use to stop the server.
 
 ### composeRoutes(...routes) => route
 
