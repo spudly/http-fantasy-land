@@ -6,6 +6,7 @@
     "babel-cli": "^6.24.1",
     "babel-preset-env": "^1.4.0",
     "babel-preset-stage-3": "^6.24.1",
+    "codecov": "^2.1.0",
     "eslint": "^3.17.1",
     "get-port": "^3.1.0",
     "get-stream": "^3.0.0",
@@ -19,7 +20,7 @@
     "build"
   ],
   "scripts": {
-    "test": "jest",
+    "test": "jest && codecov --token=3d051c27-f3be-4de7-81cf-67d27c98a02e",
     "lint": "eslint .",
     "demo": "babel-node demo.js",
     "precommit": "lint-staged",
@@ -53,5 +54,10 @@
       ],
       "stage-3"
     ]
+  },
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true,
+    "collectCoverageFrom": ["src/**/*.js"]
   }
 }
