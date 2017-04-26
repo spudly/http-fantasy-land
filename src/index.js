@@ -3,7 +3,7 @@ import createHttpMethodReducer from './utils/createHttpMethodReducer';
 export {default as listen} from './listen';
 export {default as composeRoutes} from './composeRoutes';
 export {default as sendFile} from './sendFile';
-export {default as setHeader} from './utils/setHeader';
+export {default as setHeader} from './setHeader';
 
 export const get = createHttpMethodReducer('GET');
 export const head = createHttpMethodReducer('HEAD');

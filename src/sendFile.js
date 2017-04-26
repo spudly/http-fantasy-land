@@ -2,7 +2,7 @@ import fs from 'fs';
 import compose from 'ramda/src/compose';
 import assoc from 'ramda/src/assoc';
 import mimeTypes from './utils/mimeTypes';
-import setHeader from './utils/setHeader';
+import setHeader from './setHeader';
 import {extname} from 'path';
 
 const sendFile = file =>

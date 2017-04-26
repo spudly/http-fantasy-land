@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`exports functions 1`] = `
+Object {
+  "composeRoutes": "function",
+  "connect": "function",
+  "del": "function",
+  "get": "function",
+  "head": "function",
+  "listen": "function",
+  "options": "function",
+  "patch": "function",
+  "post": "function",
+  "put": "function",
+  "sendFile": "function",
+  "setHeader": "function",
+  "trace": "function",
+}
+`;
