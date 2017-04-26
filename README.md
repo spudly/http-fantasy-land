@@ -1,6 +1,7 @@
 # [WIP] http-fantasy-land
 
 [![Build Status](https://travis-ci.org/spudly/http-fantasy-land.svg?branch=master)](https://travis-ci.org/spudly/http-fantasy-land)
+[![eh?](https://codecov.io/gh/spudly/http-fantasy-land/branch/master/graph/badge.svg)](https://codecov.io/gh/spudly/http-fantasy-land)
 
 An HTTP server library with a functional twist (a work in progress).
 
