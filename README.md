@@ -7,9 +7,11 @@ A web server library that allows you to create your server using functional conc
 
 ## Getting Started
 
-`npm install --save http-fantasy-land`
-
 ```
+npm install --save http-fantasy-land
+```
+
+```js
 import {listen, get} from 'http-fantasy-land';
 
 const home = (response, request) => ({
