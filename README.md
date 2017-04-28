@@ -3,13 +3,29 @@
 [![Build Status](https://travis-ci.org/spudly/http-fantasy-land.svg?branch=master)](https://travis-ci.org/spudly/http-fantasy-land)
 [![eh?](https://codecov.io/gh/spudly/http-fantasy-land/branch/master/graph/badge.svg)](https://codecov.io/gh/spudly/http-fantasy-land)
 
-An HTTP server library with a functional twist (a work in progress).
+A web server library that allows you to create your server using functional concepts.
 
-## Concepts
+## Getting Started
 
-* functional
-* composition
-* immutability
+`npm install --save http-fantasy-land`
+
+```
+import {listen, get} from 'http-fantasy-land';
+
+const home = (response, request) => ({
+  ...response,
+  statusCode: 200,
+  body: 'It works!',
+});
+
+const router = composeRoutes(
+  get('/', home),
+);
+
+listen(router, {port: 8080}).then(stop => {
+  console.log('Listening @ http://localhost:8080');
+});
+```
 
 ## API
 
@@ -107,3 +123,7 @@ listen(route, {port: 8080}).then(stop => {
 ### trace('/path', route) => route
 
 ### patch('/path', route) => route
+
+## Compatibility
+
+[TODO: document usage w/ express/connect/etc.]
