@@ -47,9 +47,42 @@ The response object is a serialized, immutable representation of an [http.Server
 }
 ```
 
-### listen(route, {port: 8080}).then(stop => { stop(); });
+### listen
+`listen :: ((Object, Object) -> Object, Object) -> Promise<() -> void>`
 
-The listen function takes a route and an options object. It then creates and starts a server and returns a promise that resolves to a `stop()` function that you can use to stop the server.
+**Description:**
+Creates and starts a http/https server using the supplied route and options. Returns a promise that resolves to a `stop()` function.
+
+<details>
+  <summary><strong>Arguments</strong></summary>
+  <dl>
+    <dt>route :: (Object, Object) -> Object</dt>
+    <dd>A Route function. Accepts a response object and a request object. Returns a new response object.</dd>
+    <dt>options :: Object</dt>
+    <dd>
+
+Server Configuration Options. Accepts port, hostname, and backlog from [http.listen](https://nodejs.org/dist/latest-v7.x/docs/api/http.html#http_server_listen_port_hostname_backlog_callback), as well as any option accepted by [https.createServer](https://nodejs.org/dist/latest-v7.x/docs/api/https.html#https_https_createserver_options_requestlistener)
+
+See the links above for detailed descriptions of each option.
+    </dd>
+  </dl>
+</details>
+
+**Return Value:** Function - A function that stops the server.
+
+<details>
+  <summary><strong>Example:</strong></summary>
+
+```js
+listen(route, {port: 8080}).then(stop => {
+  console.log('Listening @ http://localhost:8080');
+  setTimeout(() => {
+    stop();
+    console.log('Server stopped!');
+  }, 500);
+});
+```
+</details>
 
 ### composeRoutes(...routes) => route
 
