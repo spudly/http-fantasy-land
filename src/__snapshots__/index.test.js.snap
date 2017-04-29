@@ -5,6 +5,7 @@ Object {
   "composeRoutes": "function",
   "connect": "function",
   "del": "function",
+  "dir": "function",
   "get": "function",
   "head": "function",
   "listen": "function",

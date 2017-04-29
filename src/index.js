@@ -4,6 +4,7 @@ export {default as listen} from './listen';
 export {default as composeRoutes} from './composeRoutes';
 export {default as sendFile} from './sendFile';
 export {default as setHeader} from './setHeader';
+export {default as dir} from './dir';
 
 export const get = createHttpMethodReducer('GET');
 export const head = createHttpMethodReducer('HEAD');
