@@ -6,6 +6,10 @@ Object {
     "Accept": "text/css",
   },
   "method": "POST",
+  "rawHeaders": Array [
+    "Accept",
+    "text/css",
+  ],
   "url": "/path/to/something",
 }
 `;
