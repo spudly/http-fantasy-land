@@ -61,5 +61,6 @@
     "collectCoverageFrom": [
       "src/**/*.js"
     ]
-  }
+  },
+  "license": "MIT"
 }
