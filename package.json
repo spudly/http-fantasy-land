@@ -1,6 +1,6 @@
 {
   "name": "http-fantasy-land",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "devDependencies": {
     "@spudly/eslint-config": "^5.0.1",
     "babel-cli": "^6.24.1",
