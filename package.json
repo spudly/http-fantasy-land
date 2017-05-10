@@ -20,6 +20,7 @@
     "build"
   ],
   "scripts": {
+    "test-only": "jest",
     "test": "jest && codecov --token=3d051c27-f3be-4de7-81cf-67d27c98a02e",
     "lint": "eslint .",
     "demo": "babel-node demo.js",
