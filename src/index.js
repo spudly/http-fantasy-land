@@ -2,6 +2,7 @@ import createHttpMethodReducer from './utils/createHttpMethodReducer';
 
 export {default as listen} from './listen';
 export {default as composeRoutes} from './composeRoutes';
+export {default as composeRoutesLeft} from './composeRoutesLeft';
 export {default as sendFile} from './sendFile';
 export {default as setHeader} from './setHeader';
 export {default as dir} from './dir';
