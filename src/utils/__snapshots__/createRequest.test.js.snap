@@ -5,6 +5,9 @@ Object {
   "headers": Object {
     "Accept": "text/css",
   },
+  "httpVersion": "1.1",
+  "httpVersionMajor": "1",
+  "httpVersionMinor": "1",
   "method": "POST",
   "rawHeaders": Array [
     "Accept",

@@ -8,6 +8,9 @@ test('creates a request object from the passed http request object', () => {
     headers: {
       Accept: 'text/css',
     },
+    httpVersion: '1.1',
+    httpVersionMajor: '1',
+    httpVersionMinor: '1',
   };
 
   expect(createRequest(nativeRequest)).toMatchSnapshot();
