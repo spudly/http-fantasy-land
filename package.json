@@ -39,6 +39,7 @@
     ]
   },
   "dependencies": {
+    "accept": "^2.1.3",
     "lodash.isplainobject": "^4.0.6",
     "mime-db": "^1.27.0",
     "pify": "^2.3.0",

@@ -2,6 +2,7 @@
 
 exports[`exports functions 1`] = `
 Object {
+  "accept": "function",
   "acl": "function",
   "bind": "function",
   "checkout": "function",

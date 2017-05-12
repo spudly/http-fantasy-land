@@ -1,8 +1,6 @@
-import composeRoutes from '../composeRoutes';
-
-const createHttpMethodReducer = method => (url, ...routes) => (response, request) => {
+const createHttpMethodReducer = method => (url, route) => (response, request) => {
   if (request.method === method && request.url === url) {
-    return composeRoutes(...routes)(response, request);
+    return route(response, request);
   }
   return response;
 };

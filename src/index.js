@@ -5,6 +5,7 @@ export {default as composeRoutes} from './composeRoutes';
 export {default as composeRoutesLeft} from './composeRoutesLeft';
 export {default as sendFile} from './sendFile';
 export {default as setHeader} from './setHeader';
+export {default as accept} from './accept';
 export {default as dir} from './dir';
 
 export const acl = createHttpMethodReducer('ACL');
