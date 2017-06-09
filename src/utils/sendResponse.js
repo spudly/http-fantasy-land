@@ -6,8 +6,11 @@ import sendStream from './sendStream';
 import isPlainObject from 'lodash.isplainobject';
 
 const sendResponse = (nativeResponse, response) => {
-  // eslint-disable-next-line no-param-reassign
+  /* eslint-disable no-param-reassign */
   nativeResponse.statusCode = response.statusCode || 500;
+  if (response.statusMessage) {
+    nativeResponse.statusMessage = response.statusMessage;
+  }
 
   forEachObjIndexed((value, key) => {
     nativeResponse.setHeader(key, value);
@@ -28,6 +31,7 @@ const sendResponse = (nativeResponse, response) => {
       sendString(JSON.stringify(response.body), nativeResponse);
       return;
     }
+    /* eslint-enable no-param-reassign */
   }
 
   throw new Error('Invalid/Unset response body');
