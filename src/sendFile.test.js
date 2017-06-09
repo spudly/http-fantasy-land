@@ -2,10 +2,10 @@ import fs from 'fs';
 import getStream from 'get-stream';
 import sendFile from './sendFile';
 
-test('sets status:200, Content-Type header, body to a readable stream', async () => {
+test('sets statusCode:200, Content-Type header, body to a readable stream', async () => {
   const file = `${__dirname}/sendFile.js`;
   const response = await sendFile(file)({}, {});
-  expect(response.status).toBe(200);
+  expect(response.statusCode).toBe(200);
   expect(response.headers).toEqual({
     'Content-Type': 'application/javascript',
   });

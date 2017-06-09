@@ -16,7 +16,7 @@ const sendFile = file => async response => {
     return {
       ...response,
       body: fs.createReadStream(file),
-      status: 200,
+      statusCode: 200,
       headers: {
         ...response.headers,
         'Content-Type': mimeTypes[extname(file).substr(1)],

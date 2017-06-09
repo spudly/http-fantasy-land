@@ -7,7 +7,7 @@ import isPlainObject from 'lodash.isplainobject';
 
 const sendResponse = (nativeResponse, response) => {
   // eslint-disable-next-line no-param-reassign
-  nativeResponse.statusCode = response.status || 500;
+  nativeResponse.statusCode = response.statusCode || 500;
 
   forEachObjIndexed((value, key) => {
     nativeResponse.setHeader(key, value);

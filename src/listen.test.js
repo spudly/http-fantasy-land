@@ -8,7 +8,7 @@ const get = (...args) => new Promise(resolve => http.get(...args, resolve));
 test('serves the provided route', async () => {
   const port = await getPort();
   const route = jest.fn(() => ({
-    status: 200,
+    statusCode: 200,
     headers: {
       'Content-Type': 'application/json',
     },
