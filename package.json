@@ -1,18 +1,18 @@
 {
   "name": "http-fantasy-land",
   "devDependencies": {
-    "@spudly/eslint-config": "^5.0.1",
+    "@spudly/eslint-config": "^5.1.0",
     "babel-cli": "^6.24.1",
-    "babel-preset-env": "^1.4.0",
+    "babel-preset-env": "^1.5.2",
     "babel-preset-stage-3": "^6.24.1",
-    "codecov": "^2.1.0",
+    "codecov": "^2.2.0",
     "eslint": "^3.17.1",
     "get-port": "^3.1.0",
     "get-stream": "^3.0.0",
-    "husky": "^0.13.3",
-    "jest": "^19.0.2",
-    "lint-staged": "^3.3.1",
-    "prettier": "^1.1.0",
+    "husky": "^0.13.4",
+    "jest": "^20.0.4",
+    "lint-staged": "^3.6.1",
+    "prettier": "^1.4.4",
     "semantic-release": "^6.3.6"
   },
   "main": "build/index.js",
@@ -40,13 +40,13 @@
     ]
   },
   "dependencies": {
-    "accept": "^2.1.3",
+    "accept": "^2.1.4",
     "cookie": "^0.3.1",
     "lodash.isplainobject": "^4.0.6",
-    "mime-db": "^1.27.0",
+    "mime-db": "^1.28.0",
     "path-to-regexp": "^1.7.0",
-    "pify": "^2.3.0",
-    "ramda": "^0.23.0"
+    "pify": "^3.0.0",
+    "ramda": "^0.24.1"
   },
   "babel": {
     "presets": [
@@ -54,7 +54,7 @@
         "env",
         {
           "targets": {
-            "node": 7.5
+            "node": "7.5"
           }
         }
       ],

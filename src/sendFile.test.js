@@ -11,3 +11,14 @@ test('sets statusCode:200, Content-Type header, body to a readable stream', asyn
   });
   expect(await getStream(response.body)).toBe(await getStream(fs.createReadStream(file)));
 });
+
+test('if path is a directory, rejects promise', async () => {
+  await expect(sendFile(__dirname)({}, {})).rejects.toBeInstanceOf(Error);
+});
+
+test('if path doesnt exist, returns unmodified response', async () => {
+  const response = {};
+  const request = {};
+  const response2 = await sendFile(`${__dirname}/noexist.html`)(response, request);
+  expect(response2).toBe(response);
+});
